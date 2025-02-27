@@ -51,6 +51,7 @@
             color: white;
             text-decoration: none;
             font-weight: bold;
+            cursor: pointer;
         }
         .nav-menu ul li {
             transition: transform 0.3s ease-in-out;
@@ -77,11 +78,11 @@
     <nav>
         <div class="nav-menu">
             <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact-me">Contact Me</a></li>
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#about-me" class="nav-link">About Me</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#contact-me" class="nav-link">Contact Me</a></li>
             </ul>
         </div>
     </nav>
@@ -103,6 +104,10 @@
         <p>Passionate about technology and development.</p>
     </section>
 
+    <footer>
+        <p><a href="https://www.linkedin.com/in/zezomaeen/" target="_blank">LinkedIn</a> | <a href="resources/docs/Zeyad_Software_Engineer_CV.pdf" target="_blank">Download CV</a></p>
+    </footer>
+
     <script>
         $(document).ready(function() {
             gsap.to(".header-text", { duration: 2, opacity: 1, y: -20, ease: "power2.out" });
@@ -117,6 +122,14 @@
                     opacity: 1,
                     y: 0,
                     duration: 1
+                });
+            });
+            
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
                 });
             });
         });
