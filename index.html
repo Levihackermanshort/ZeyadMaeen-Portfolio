@@ -11,11 +11,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <style>
         body {
-            background-image: url('https://raw.githubusercontent.com/Levihackermanshort/ZeyadMaeen-Portfolio/main/resources/images/portfolio.png');
+            background: url('resources/images/portfolio.png') no-repeat center center fixed;
             background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
@@ -30,9 +27,8 @@
             justify-content: center;
             gap: 20px;
             list-style: none;
-            padding: 0;
-            background: rgba(0, 0, 0, 0.8);
             padding: 15px;
+            background: rgba(0, 0, 0, 0.8);
             position: fixed;
             width: 100%;
             top: 0;
@@ -52,13 +48,12 @@
             padding: 50px;
             text-align: center;
         }
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 2s ease-in forwards;
+        @keyframes backgroundAnimation {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        body {
+            animation: backgroundAnimation 10s infinite linear;
         }
     </style>
 </head>
