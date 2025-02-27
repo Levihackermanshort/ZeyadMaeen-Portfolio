@@ -2,72 +2,247 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Me</title>
-    <meta name="description" content="Personal Portfolio of Zeyad Maeen - Software Engineer & AI/Robotics Enthusiast">
-    <meta name="author" content="Zeyad Maeen">
-    <meta name="robots" content="index, follow">
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            text-align: center;
-            background-color: #f8f9fa;
-        }
-        header {
-            background-color: #343a40;
-            color: #ffffff;
-            padding: 20px;
-            font-size: 24px;
-        }
-        .container {
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 20px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-        }
-        img.profile {
-            width: 150px;
-            border-radius: 50%;
-            margin-top: 10px;
-        }
-        h1 {
-            color: #343a40;
-        }
-        p {
-            font-size: 18px;
-            color: #555;
-        }
-        .social-links a {
-            margin: 10px;
-            text-decoration: none;
-            color: #007bff;
-            font-size: 20px;
-        }
-    </style>
-</head>
-<body>
+    <title>Zeyad's Portfolio Website</title>
 
-<header>Welcome to My Portfolio</header>
+    <link rel="stylesheet" href="resources/css/styles.css">
 
-<div class="container">
-    <img class="profile" file="profile.jpg" alt="Profile Picture">
-    <h1>Zeyad Maeen</h1>
-    <p>Software Engineer | Robotics Enthusiast | Open Source Contributor</p>
-    <p>Passionate about ROS2, MAVROS, and underwater robotics.</p>
+    <link rel="icon" href="resources/icons/flavicon.svg">
     
-    <div class="social-links">
-        <a href="https://github.com/Levihackermanshort" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/zezomaeen/" target="_blank">LinkedIn</a> |
-        <a href="mailto:zeyadmaeen1@gmail.com">Email</a>
-    </div>
-</div>
+    <meta name="image" property="og:image" content="https://aymenadjali.co.uk/resources/images/portfolio.png">
+    
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HSTBC1LRHT"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-HSTBC1LRHT');
+</script>
+
+</head>
+
+<body>
+    <nav>
+        <div class="nav-menu">
+  
+             <ul>
+                <li><img src="resources/icons/flavicon.svg" alt=""></li>
+                  <li><a href="#home">Home</a></li>
+                 <li><a href="#projects">Projects</a></li>
+                 <li><a href="#about-me">About Me</a></li>
+                  <li><a href="#skills">Skills</a></li>
+                  <li><a href="#contact-me">Contact Me</a></li>
+             </ul>
+        </div>
+    </nav>
+
+    <header id="home">
+        <div class="toggle" id="toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="header-text">
+            <h1>Hello! I'm Zeyad Maeen</h1>
+            <p>Software Engineer - Full Stack Developer student</p>
+            <!--<a href="https://drive.google.com/file/d/1cyAvuJyv1SS_TPp3Ii_4P7WNYMC1DVmy/view?usp=sharing" target="_blank">My Resume</a> -->
+        </div>
+        <div class="social-links">
+            <a href="https://github.com/Levihackermanshort" target="_blank"><img src="resources/icons/github.svg" alt=""></a>
+            <a href="https://www.linkedin.com/in/zezomaeen/" target="_blank"><img src="resources/icons/linkedincolour.svg" alt=""></a>
+            <a href="mailto:zeyadmaeen1@gmail.com"><img src="resources/icons/email.svg" alt=""></a>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <main>
+        <section class="projects" id="projects">
+            <div class="top">
+                <h2 class="section-title">Projects</h2>
+                <hr>
+            </div>
+
+            <div class="info">
+                <p>All projects have links to their respective github repositories where there is much more detail about the projects,
+                    <br>
+                     the source code is also available to view.
+                </p>
+            </div>
+
+            <article class="article odd">
+                <div class="feature-project">
+                    <h3>featured Project .1</h3>
+                </div>
+                <div class="project-info">
+                    <div class="project-text">
+                        <div class="project-header">
+                            <h4>tetrECS</h4>
+                            <a href="https://github.com/aymen-adjali/tetrECS"  target="_blank"><img src="resources/icons/github.svg" alt="github logo"></a>
+                        </div>
+                        <p>-This project is a fast paced block placement game (based on tetris) written in Java, using the JavaFX library. 
+                            <br> 
+                           -Players compete against time to place pieces into a grid whilst trying to clear rows and columns to gain points and increase their level, gaining their spot on the leaderboards!
+                        </p>
+                    </div>
+                    <video autoplay loop muted playsinline>
+                        <source src="resources/videos/tetrECS.mp4" type="video/mp4">
+                      </video>
+                </div>
+            </article>
+
+            <article class="article even">
+                <div class="feature-project">
+                    <h3>featured Project .2</h3>
+                </div>
+                <div class="project-info">
+                    <div class="project-text">
+                        <div class="project-header">
+                            <h4>ECSBattleArena</h4>
+                            <a href="https://github.com/aymen-adjali/ECSBattleArena" target="_blank"><img src="resources/icons/github.svg" alt="github logo"></a>
+                        </div>
+                        <p>-This project is a battle simulation between student guilds and monsters written in Java. 
+                            <br>
+                            -Use different student types and abilities to battle your way through floors filled with monsters
+                            whilst gaining knowledge points and character levels to reach the top and defeat the tower of monsters!
+                        </p>
+                    </div> 
+                    <img src="resources/videos/ECSBattleArena.gif" alt="">
+                </div>
+            </article>
+
+            <article class="article odd">
+                <div class="feature-project">
+                    <h3>featured Project .3</h3>
+                </div>
+                <div class="project-info">
+                    <div class="project-text">
+                        <div class="project-header">
+                            <h4>Portfolio Website</h4>
+                            <a href="https://github.com/aymen-adjali/portfolioProject" target="_blank"><img src="resources/icons/github.svg" alt="github logo"></a>
+                        </div>
+                        <p>-This project is my personal portfolio page, made from scratch using HTML, CSS and JavaScript which you are on right now...
+                           <br>
+                           -It has been an opportunity for me to work on my recently learned front end web design skills whilst also learning more.
+                        </p>
+                    </div> 
+                    <img src="resources/images/portfolio.png" alt="">
+                </div>
+            </article>
+
+  
+        </section>
+
+        <section id="about-me">
+            <div class="top">
+                <h2 class="section-title">About Me</h2>
+                <hr>
+            </div>
+            <article class="article about_me">
+                <div class="info">
+                    <p>Hello! My name is Aymen, I'm a Computer Science student at the University Of Southampton. I aspire to have my career in cyber security 
+                        although I'm not too familiar with it yet!
+                        <br><br>
+                        I enjoy all kinds of sports such as football, swimming and cycling. I also love nature, space, video games and chess.
+                        <br><br>
+                        Currently I am self learning the basics of being a Full-Stack Engineer. Right now I am
+                            gaining knowledge in Front-end web development (as you can hopefully see from this website!). I will
+                            hopefully be able to move into back-end soon.
+                     </p>
+                </div>
+
+            </article>
+
+            <div class="polaroid">
+                <img src="resources/images/IMG_0125.JPG" alt="5 Lake" style="width:100%">
+              <div class="container">
+                 <p>The Lake District</p>
+              </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="top">
+                <h2 class="section-title">Skills</h2>
+                <hr>
+            </div>
+            <article class="my_skills">
+                <div class="skill">
+                    <img src="resources/icons/java.svg" alt="">
+                    <h2>java</h2>
+                </div>
+
+                <div class="skill">
+                    <img src="resources/icons/javaScript.svg" alt="">
+                    <h2>javaScript</h2>
+                </div>
+
+                <div class="skill">
+                    <img src="resources/icons/css.svg" alt="">
+                    <h2>css</h2>
+                </div>
+
+                <div class="skill">
+                    <img src="resources/icons/html.svg" alt="">
+                    <h2>html</h2>
+                </div>
+
+                <div class="skill">
+                    <img src="resources/icons/git.svg" alt="">
+                    <h2>git</h2>
+                </div>
+
+                <div class="skill">
+                    <img src="resources/icons/linux.svg" alt="">
+                    <h2>linux</h2>
+                </div>
+
+                <div class="skill">
+                    <img src="resources/icons/sqlite.svg" alt="">
+                    <h2>sqlite</h2>
+                </div>
+            </article>
+
+        </section>
+
+
+        <section id="contact-me">
+            <div class="top">
+                <h2 class="section-title">Contact Me</h2>
+                <hr>
+            </div> 
+            <div class="info">
+                <p>Thank you for visiting my website! <br>I would love to hear any feedback you may have :)</p>
+            </div>
+            
+            <article class="article contact_me">
+                <form action="https://formspree.io/f/myylngww" class="send-message" method="post">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" class="form-control"  placeholder="Subject" required>
+
+                    <label for="email">Email</label>
+                    <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+
+                    <label for="message">Message</label>
+                    <textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea>
+
+                    <input type="submit" value="Submit" class="form-control submit">
+                </form>
+            </article>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <h2>Coded by Zeyad Maeen 2024</h2>
+    </footer>
+
+    <script src="resources/js/main.js"></script>
 </body>
 </html>
