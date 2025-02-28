@@ -3,130 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zeyad's Portfolio Website</title>
+    <title>Zeyad Maeen Portfolio</title>
     <link rel="stylesheet" href="resources/css/styles.css">
-    <link rel="icon" href="">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="icon" href="resources/images/favicon.ico">
+    
+    <!-- React and ReactDOM (CDN for now, but should be replaced with your build system) -->
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+    
+    <!-- Babel (for JSX support in script tags) -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
         body {
-            background: url('resources/images/portfolio.png') no-repeat center center fixed;
-            background-size: cover;
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            position: relative;
-            color: white;
-        }
-        .background-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: -1;
-            animation: backgroundAnimation 10s infinite alternate;
-        }
-        .header-text {
-            text-align: center;
-            margin-top: 100px;
-            opacity: 0;
-        }
-        .nav-menu ul {
+            background-color: #121212;
+            color: #ffffff;
             display: flex;
+            align-items: center;
             justify-content: center;
-            gap: 20px;
-            list-style: none;
-            padding: 15px;
-            background: rgba(0, 0, 0, 0.9);
-            position: fixed;
-            width: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1000;
+            height: 100vh;
         }
-        .nav-menu ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        .nav-menu ul li {
-            transition: transform 0.3s ease-in-out;
-        }
-        .nav-menu ul li:hover {
-            transform: scale(1.1);
-        }
-        .section {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 1s ease-out;
-            padding: 50px;
+        #root {
+            width: 80%;
+            max-width: 900px;
             text-align: center;
-        }
-        @keyframes backgroundAnimation {
-            0% { filter: hue-rotate(0deg) brightness(1); }
-            100% { filter: hue-rotate(360deg) brightness(1.2); }
         }
     </style>
 </head>
 <body>
-    <div class="background-overlay"></div>
-    <nav>
-        <div class="nav-menu">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#about-me">About Me</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact-me">Contact Me</a></li>
-            </ul>
-        </div>
-    </nav>
+    <div id="root"></div>
 
-    <header id="home" class="section">
-        <div class="header-text">
-            <h1 class="fade-in">Hello! I'm Zeyad Maeen</h1>
-            <p class="fade-in">Software Engineer - Full Stack Developer</p>
-        </div>
-    </header>
+    <!-- Main script that renders your React app -->
+    <script type="text/babel">
+        function App() {
+            return (
+                <div>
+                    <h1>Welcome to My Portfolio</h1>
+                    <p>This is my portfolio website showcasing my projects and skills.</p>
+                </div>
+            );
+        }
 
-    <section id="projects" class="section">
-        <h2>Projects</h2>
-        <p>Some of my best work displayed here.</p>
-    </section>
-
-    <section id="about-me" class="section">
-        <h2>About Me</h2>
-        <p>Passionate about technology and development.</p>
-    </section>
-
-    <footer>
-        <p><a href="https://www.linkedin.com/in/zezomaeen/" target="_blank">LinkedIn</a> | <a href="resources/docs/Zeyad_Software_Engineer_CV.pdf" target="_blank">Download CV</a></p>
-    </footer>
-
-    <script>
-        $(document).ready(function() {
-            gsap.to(".header-text", { duration: 2, opacity: 1, y: -20, ease: "power2.out" });
-            
-            gsap.utils.toArray(".section").forEach(section => {
-                gsap.to(section, {
-                    scrollTrigger: {
-                        trigger: section,
-                        start: "top 80%",
-                        toggleActions: "play none none none"
-                    },
-                    opacity: 1,
-                    y: 0,
-                    duration: 1
-                });
-            });
-        });
+        // Rendering React component
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+        root.render(<App />);
     </script>
 </body>
 </html>
